@@ -1,0 +1,17 @@
+= install-coapp-tools
+
+Install CoAPP tools
+
+Step syntax:
+
+....
+- name: <name>
+  uses: myci-actions/install-coapp-tools@<version>
+....
+
+Step example:
+....
+- name: install CoAPP tools
+  uses: myci-actions/install-coapp-tools@master
+....
+
