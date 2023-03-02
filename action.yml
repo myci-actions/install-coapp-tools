@@ -7,7 +7,9 @@ runs:
   using: "composite"
   steps:
     - name: download CoAPP tools installer
-      run: (new-object net.webclient).DownloadFile('http://coapp.org/files/CoApp.Tools.Powershell.msi', 'C:\CoApp.Tools.Powershell.msi')
+      run: |
+        # (new-object net.webclient).DownloadFile('http://coapp.org/files/CoApp.Tools.Powershell.msi', 'C:\CoApp.Tools.Powershell.msi')
+        (new-object net.webclient).DownloadFile('http://gagis.hopto.org/CoApp.Tools.Powershell.msi', 'C:\CoApp.Tools.Powershell.msi')
       shell: powershell
     - name: install CoAPP tools
       run: Start-Process -FilePath msiexec -ArgumentList /i, 'C:\CoApp.Tools.Powershell.msi', /quiet -Wait
